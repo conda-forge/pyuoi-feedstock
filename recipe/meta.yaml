@@ -1,5 +1,5 @@
 {% set name = "pyuoi" %}
-{% set version = "0.0.61" %}
+{% set version = "0.99.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4085faf3c6dd2add38fb199350c50fcccbe6eafe78c07ec25844ca4d773d7095
+  sha256: 0e477954d3b4d004ddbc74768e229d8a29740830a0c2556f9113edd17f95f2d7
 
 build:
   number: 0

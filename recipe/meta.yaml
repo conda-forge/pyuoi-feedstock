@@ -1,5 +1,5 @@
 {% set name = "pyuoi" %}
-{% set version = "0.0.61" %}
+{% set version = "0.99.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4085faf3c6dd2add38fb199350c50fcccbe6eafe78c07ec25844ca4d773d7095
+  sha256: 0e477954d3b4d004ddbc74768e229d8a29740830a0c2556f9113edd17f95f2d7
 
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [py<35]
+  skip: True  # [py27]
   skip: True  # [win]
 
 requirements:
@@ -24,6 +24,7 @@ requirements:
     - numpy
     - cython
   run:
+    - python
     - {{ pin_compatible('numpy') }}
     - h5py
     - scikit-learn
@@ -34,7 +35,7 @@ test:
 
 about:
   home: https://github.com/BouchardLab/pyuoi
-  license: BSD-3-Clause
+  license: BSD-3-Clause-LBNL
   license_family: BSD
   license_file: LICENSE.txt
   summary: 'The Union of Intersections Framework in Python'

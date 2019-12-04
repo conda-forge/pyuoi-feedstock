@@ -3,7 +3,7 @@ About pyuoi
 
 Home: https://github.com/BouchardLab/pyuoi
 
-Package license: BSD-3-Clause
+Package license: BSD-3-Clause-LBNL
 
 Feedstock license: BSD 3-Clause
 

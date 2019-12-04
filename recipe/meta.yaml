@@ -24,6 +24,7 @@ requirements:
     - numpy
     - cython
   run:
+    - python
     - {{ pin_compatible('numpy') }}
     - h5py
     - scikit-learn

@@ -1,5 +1,5 @@
 {% set name = "pyuoi" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2bcb2c530fbbf587bb32e3090602b57074b163e81c21097a63845df64ec97e1b
+  sha256: 9ea2267beff5dc2d11d4f5dec6ea2669ed360c239eb223250b3d0f78b4621602
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [py27]
-  skip: True  # [win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<36]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -38,7 +38,7 @@ about:
   license: BSD-3-Clause-LBNL
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'The Union of Intersections Framework in Python'
+  summary: The Union of Intersections Framework in Python
 
   description: |
     PyUoI contains implementations of Union of Intersections framework
